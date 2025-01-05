@@ -34,13 +34,13 @@ export default async function RootLayout({
   if (error || !data?.user) {
     profileDiv = (
       <div>
-        <Link href="/login">Log in or sign up</Link>
+        <Link prefetch={false} href="/login">Log in or sign up</Link>
       </div>
     );
   } else {
     profileDiv = (<div>
-      <span>Logged in as</span> <Link href="/profile" className="text-primary-800">{data.user.email}</Link><br />
-      <Link href="/logout" className="text-red-600">Sign out</Link>
+      <span>Logged in as</span> <Link prefetch={false} href="/profile" className="text-primary-800">{data.user.email}</Link><br />
+      <Link prefetch={false} href="/logout" className="text-red-600">Sign out</Link>
     </div>);
   }
   //if (error || !data?.user) {
@@ -57,13 +57,13 @@ export default async function RootLayout({
             <div className="container mx-auto py-12">
               <div className="flex flex-row">
                 <div>
-                  <Link href="/" className="text-3xl">LiquidCalc</Link>
+                  <Link prefetch={false} href="/" className="text-3xl">LiquidCalc</Link>
                 </div>
                 <div className="basis-full grid grid-flow-col gap-5 mx-10">
-                  <Link href="/calculator" className="text-xl">Calculator</Link>
-                  <Link href="/liquids" className="text-xl">Liquids</Link>
-                  <Link href="/bases" className="text-xl">Bases</Link>
-                  <Link href="/flavours" className="text-xl">Flavours</Link>
+                  <Link prefetch={false} href="/calculator" className="text-xl">Calculator</Link>
+                  <Link prefetch={false} href="/liquids" className="text-xl">Liquids</Link>
+                  <Link prefetch={false} href="/bases" className="text-xl">Bases</Link>
+                  <Link prefetch={false} href="/flavours" className="text-xl">Flavours</Link>
 
                 </div>
                 <div>
