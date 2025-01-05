@@ -5,7 +5,11 @@ export interface Part {
     volume: string,
 }
 
-export function RatioGraph({parts}: Array<Part>) {
+export interface RatioGraphProps {
+    parts: Array<Part>,
+}
+
+export function RatioGraph({parts}: RatioGraphProps) {
 
     const colors = [
         "bg-blue-600",

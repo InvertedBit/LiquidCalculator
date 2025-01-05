@@ -1,4 +1,12 @@
-export const EditIcon = ({fill = "currentColor", filled, size, height, width, ...props}) => {
+export interface IconProps {
+	fill: string,
+	filled?: boolean,
+	size?: number,
+	height?: number,
+	width?: number,
+}
+
+export const EditIcon = ({fill = "currentColor", filled = true, size, height, width, ...props} : IconProps) => {
   return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 			fill={filled ? fill : "none"}
@@ -17,7 +25,7 @@ export const EditIcon = ({fill = "currentColor", filled, size, height, width, ..
 };
 
 
-export const TrashIcon = ({fill = "currentColor", filled, size, height, width, ...props}) => {
+export const TrashIcon = ({fill = "currentColor", filled = true, size, height, width, ...props} : IconProps) => {
   return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
 			fill={filled ? fill : "none"}

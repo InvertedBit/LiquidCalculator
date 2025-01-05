@@ -3,7 +3,7 @@ import { createClient } from '@/utils/supabase/client';
 import { redirect } from 'next/navigation';
 
 export async function createBase(formData: FormData) {
-    const supabase = await createClient();
+    const supabase = createClient();
 
     const data = {
         name: formData.get('name'),

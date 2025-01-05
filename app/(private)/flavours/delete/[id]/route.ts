@@ -7,7 +7,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const id = (await params).id;
     const supabase = await createClient();
 
-    const response = await supabase
+    await supabase
         .from('flavours')
         .delete()
         .eq('id', id);

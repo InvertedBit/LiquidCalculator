@@ -1,8 +1,6 @@
 'use client'
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
-import { EditIcon } from "@/lib/icons";
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 import { BaseCard } from "@/components/cards/BaseCard";
@@ -28,7 +26,7 @@ export default function Bases() {
 	},[]);
 
 
-	const baseCards = bases.map((item, key) => <BaseCard key={key} {...item} />)
+	const baseCards = bases.map((item, key) => <BaseCard key={key} base={item} />)
 
   return (
     <div className="container mx-auto max-w-5xl">

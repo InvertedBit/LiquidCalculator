@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/button";
 import { EditIcon, TrashIcon } from "@/lib/icons";
 import { useRouter } from "next/navigation";
 import { Chip } from "@nextui-org/react";
+import { JSX } from "react";
 
 export interface Base {
     id: number,
@@ -13,7 +14,14 @@ export interface Base {
     vg: number,
 }
 
-export function BaseCard({id, name, nicotine_type, nicotine_strength, pg, vg, layout = 'default', controls = []}: Base) {
+export interface BaseCardProps {
+    base: Base,
+    layout?: string,
+    controls?: Array<JSX.Element>,
+}
+
+export function BaseCard({base, layout = 'default', controls = []}: BaseCardProps) {
+    const {id, name, nicotine_type, nicotine_strength, pg, vg} = base;
     const router = useRouter();
 
     if (controls.length == 0) {
@@ -27,7 +35,7 @@ export function BaseCard({id, name, nicotine_type, nicotine_strength, pg, vg, la
 
         ];
     }
-    let chips = [
+    const chips = [
         <Chip color="primary" key={0}><sup>PG</sup>/<sub>VG</sub> {pg.toString()}/{vg.toString()}</Chip>
     ];
 

@@ -1,6 +1,5 @@
 'use client'
-import { Button, Form, Input, Select, SelectItem, Textarea } from "@nextui-org/react";
-import { useState } from "react";
+import { Button, Form, Input, Textarea } from "@nextui-org/react";
 import { createBase } from './actions';
 
 export default function Page() {

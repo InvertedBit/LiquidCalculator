@@ -98,7 +98,7 @@ export default function BaseCalculator() {
                 vgLiquidIndex = index;
             }
         });
-        let nicotineRatio = 0;
+        //let nicotineRatio = 0;
         //if (hasNicotine) {
         //    nicotineRatio = newIngredients[0].ratio;
         //    if (targetRatio !== baseRatio && targetRatio !== nicotineRatio) {
@@ -205,8 +205,8 @@ export default function BaseCalculator() {
         setSelectedBases(newBases);
     };
 
-    const nicotineBaseCards = bases.filter((base) => base.nicotine_type !== 'none').map((base, index) => <BaseCard key={index} layout="compact" controls={[<Button key={0} onPressEnd={() => addNicotineBase(base)}>Add</Button>]} {...base} />)
-    const fillerBaseCards = bases.filter((base) => base.nicotine_type === 'none').map((base, index) => <BaseCard key={index} layout="compact" controls={[<Button key={0} onPressEnd={() => addFillerBase(base)}>Add</Button>]} {...base} />)
+    const nicotineBaseCards = bases.filter((base) => base.nicotine_type !== 'none').map((base, index) => <BaseCard key={index} base={base} layout="compact" controls={[<Button key={0} onPressEnd={() => addNicotineBase(base)}>Add</Button>]} />)
+    const fillerBaseCards = bases.filter((base) => base.nicotine_type === 'none').map((base, index) => <BaseCard key={index} base={base} layout="compact" controls={[<Button key={0} onPressEnd={() => addFillerBase(base)}>Add</Button>]} />)
 
     const selectedNicotineBases = nicotineBases.map((base, index) => <li key={index}><span>{base.name}</span></li>);
     const selectedFillerBases = selectedBases.map((base, index) => <li key={index}><span>{base.name}</span></li>);
