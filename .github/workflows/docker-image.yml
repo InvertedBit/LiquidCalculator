@@ -38,6 +38,11 @@ jobs:
         run: |
           echo "IMAGE_NAME=`echo ${{github.repository}} | tr '[:upper:]' '[:lower:]'`" >>${GITHUB_ENV}
 
+      - name: create .env.local
+        run: |
+          echo "NEXT_PUBLIC_SUPABASE_URL=${{env.NEXT_PUBLIC_SUPABASE_URL}}" >> .env.local |
+          echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{env.NEXT_PUBLIC_SUPABASE_ANON_KEY}}" >> .env.local
+
           
       - name: Build and push 🏗️
         uses: docker/build-push-action@v2
