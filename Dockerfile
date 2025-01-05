@@ -38,7 +38,7 @@ RUN \
 
 # Production image, copy all the files and run next
 FROM base AS runner
-LABEL org.opencontainers.image.source https://github.com/invertedbit/liquid-calculator
+LABEL org.opencontainers.image.source=https://github.com/invertedbit/liquid-calculator
 WORKDIR /app
 
 ENV NODE_ENV=production
