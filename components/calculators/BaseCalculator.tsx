@@ -200,7 +200,7 @@ export default function BaseCalculator() {
         if (selectedBases.find((base) => base.name === item.name && base.pg === item.pg && base.vg === item.vg && base.nicotine_strength === item.nicotine_strength && base.nicotine_type === item.nicotine_type)) {
             return;
         }
-        const newBases = selectedBases;
+        const newBases = selectedBases.slice();
         newBases.push(item);
         setSelectedBases(newBases);
     };
