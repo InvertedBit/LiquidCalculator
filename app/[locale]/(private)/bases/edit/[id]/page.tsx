@@ -2,16 +2,19 @@
 import { Button, Form, Input, Select, SelectItem } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { createBase } from './actions';
-import { Base } from '../../../../../components/cards/BaseCard';
+import { Base } from '../../../../../../components/cards/BaseCard';
 import { createClient } from "@/utils/supabase/client";
 
 export default function Page({ params }: { params: Promise<{ id: number }>}) {
 
     const [id, setId] = useState(0);
 
-    params.then((actualParams) => {
-        setId(actualParams.id);
-    });
+    useEffect(() => {
+        params.then((actualParams) => {
+            setId(actualParams.id);
+        });
+
+    },[params])
 
     const [pgContent, setPgContent] = useState("50");
     const [vgContent, setVgContent] = useState("50");

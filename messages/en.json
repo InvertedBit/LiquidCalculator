@@ -1,0 +1,25 @@
+{
+    "Navigation": {
+        "calculator": "Calculator",
+        "liquids": "Liquids",
+        "bases": "Bases",
+        "flavours": "Flavours"
+    },
+    "Base": {
+        "title_create": "Create new base",
+        "title_edit": "Edit base",
+        "name": "Name",
+        "save": "Save base"
+    },
+    "Mixture": {
+        "pg_content": "PG content",
+        "vg_content": "VG content"
+    },
+    "Nicotine": {
+        "type": "Type of nicotine",
+        "none": "No nicotine",
+        "freebase-nicotine": "Freebase nicotine",
+        "salt-nicotine": "Salt nicotine",
+        "strength": "Nicotine strength"
+    }
+}

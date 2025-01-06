@@ -4,7 +4,7 @@ import { createClient } from "@/utils/supabase/client";
 import { Button, Form, Input, Select, SelectItem } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { Base, BaseCard } from "../cards/BaseCard";
-import { createNewLiquid } from "@/app/(private)/calculator/actions";
+import { createNewLiquid } from "@/app/[locale]/(private)/calculator/actions";
 
 export default function BaseCalculator() {
 

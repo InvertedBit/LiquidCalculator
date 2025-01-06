@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
 import { BaseCard } from "@/components/cards/BaseCard";
-import { Base } from '../../../components/cards/BaseCard';
+import { Base } from '../../../../components/cards/BaseCard';
 
 export default function Bases() {
 	const router = useRouter();

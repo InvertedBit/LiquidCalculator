@@ -1,0 +1,25 @@
+{
+    "Navigation": {
+        "calculator": "Rechner",
+        "liquids": "Liquids",
+        "bases": "Basen",
+        "flavours": "Aromen"
+    },
+    "Base": {
+        "title_create": "Neue Base erstellen",
+        "title_edit": "Base bearbeiten",
+        "name": "Name",
+        "save": "Base speichern"
+    },
+    "Mixture": {
+        "pg_content": "PG Anteil",
+        "vg_content": "VG Anteil"
+    },
+    "Nicotine": {
+        "type": "Nikotinart",
+        "none": "Kein Nikotin",
+        "freebase-nicotine": "Freebase Nikotin",
+        "salt-nicotine": "Nikotinsalz",
+        "strength": "Nikotinstärke"
+    }
+}
