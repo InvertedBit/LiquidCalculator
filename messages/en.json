@@ -13,13 +13,29 @@
     },
     "Mixture": {
         "pg_content": "PG content",
-        "vg_content": "VG content"
+        "vg_content": "VG content",
+        "target_pg_content": "Target PG content",
+        "target_vg_content": "Target VG content",
+        "target_volume": "Target volume",
+        "ingredients": "Ingredients",
+        "nicotine_bases": "Nicotine bases",
+        "filler_bases": "Filler bases"
     },
     "Nicotine": {
         "type": "Type of nicotine",
         "none": "No nicotine",
         "freebase-nicotine": "Freebase nicotine",
         "salt-nicotine": "Salt nicotine",
-        "strength": "Nicotine strength"
+        "strength": "Nicotine strength",
+        "target_strength": "Nicotine strength"
+    },
+    "Calculator": {
+        "title": "Calculator",
+        "title_liquid": "Liquid",
+        "title_base": "Base",
+        "choose_calculator": "Choose calculator"
+    },
+    "BaseCalculator": {
+        "save_new": "Save as new Base"
     }
 }

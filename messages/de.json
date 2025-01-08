@@ -13,13 +13,29 @@
     },
     "Mixture": {
         "pg_content": "PG Anteil",
-        "vg_content": "VG Anteil"
+        "vg_content": "VG Anteil",
+        "target_pg_content": "Ziel PG Anteil",
+        "target_vg_content": "Ziel VG Anteil",
+        "target_volume": "Zielvolumen",
+        "ingredients": "Zutaten",
+        "nicotine_bases": "Nikotinbasen",
+        "filler_bases": "Füllerbasen"
     },
     "Nicotine": {
         "type": "Nikotinart",
         "none": "Kein Nikotin",
         "freebase-nicotine": "Freebase Nikotin",
         "salt-nicotine": "Nikotinsalz",
-        "strength": "Nikotinstärke"
+        "strength": "Nikotinstärke",
+        "target_strength": "Ziel-Nikotinstärke"
+    },
+    "Calculator": {
+        "title": "Rechner",
+        "title_liquid": "Liquid",
+        "title_base": "Base",
+        "choose_calculator": "Rechner auswählen"
+    },
+    "BaseCalculator": {
+        "save_new": "Als neue Base speichern"
     }
 }

@@ -5,8 +5,13 @@ import { Button, Form, Input, Select, SelectItem } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { Base, BaseCard } from "../cards/BaseCard";
 import { createNewLiquid } from "@/app/[locale]/(private)/calculator/actions";
+import { useTranslations } from "next-intl";
 
 export default function BaseCalculator() {
+
+    const t = useTranslations('BaseCalculator');
+    const tN = useTranslations('Nicotine');
+    const tM = useTranslations('Mixture');
 
 
     const [nicotineBases, setNicotineBases] = useState(new Array<Base>);
@@ -225,7 +230,7 @@ export default function BaseCalculator() {
                 <div className="w-full grid grid-cols-2 gap-10">
                     <div className="w-full grid grid-cols-2 auto-rows-min gap-2">
                         <div className="w-full col-span-2">
-                            <h3 className="text-lg">Ingredients</h3>
+                            <h3 className="text-lg">{tM('ingredients')}</h3>
                             <ul>
                                 {selectedNicotineBases}
                             </ul>
@@ -234,25 +239,25 @@ export default function BaseCalculator() {
                             </ul>
                         </div>
                         <Input name="name" label="Name" type="text" />
-                        <Select name="nicotineType" label="Nicotine type" value={nicotineType} onSelectionChange={(value) => setNicotineType(value.toString())}>
-                            <SelectItem key="none">No Nicotine</SelectItem>
-                            <SelectItem key="freebase-nicotine">Freebase Nicotine</SelectItem>
-                            <SelectItem key="salt-nicotine">Salt Nicotine</SelectItem>
+                        <Select name="nicotineType" label={tN('type')} value={nicotineType} onSelectionChange={(value) => setNicotineType(value.toString())}>
+                            <SelectItem key="none">{tN('none')}</SelectItem>
+                            <SelectItem key="freebase-nicotine">{tN('freebase-nicotine')}</SelectItem>
+                            <SelectItem key="salt-nicotine">{tN('salt-nicotine')}</SelectItem>
                         </Select>
-                        <Input name="targetPgContent" label="Target PG content" type="number" value={pgContent.toString()} onValueChange={(value) => setRatio(Number.parseInt(value), 'pg')} endContent="%" />
-                        <Input name="targetVgContent" label="Target VG content" type="number" value={vgContent.toString()} onValueChange={(value) => setRatio(Number.parseInt(value), 'vg')} endContent="%" />
-                        <Input name="targetNicotineStrength" label="Target Nicotine strength" endContent={<span><sup>mg</sup>/<sub>ml</sub></span>} type="number" value={nicotineStrength.toString()} onValueChange={(value) => setNicotineStrength(Number.parseInt(value))} />
-                        <Input name="targetVolume" label="Target volume" endContent="ml" type="number" value={targetVolume.toString()} onValueChange={(value) => setTargetVolume(Number.parseInt(value))}  />
+                        <Input name="targetPgContent" label={tM('target_pg_content')} type="number" value={pgContent.toString()} onValueChange={(value) => setRatio(Number.parseInt(value), 'pg')} endContent="%" />
+                        <Input name="targetVgContent" label={tM('target_vg_content')} type="number" value={vgContent.toString()} onValueChange={(value) => setRatio(Number.parseInt(value), 'vg')} endContent="%" />
+                        <Input name="targetNicotineStrength" label={tN('target_strength')} endContent={<span><sup>mg</sup>/<sub>ml</sub></span>} type="number" value={nicotineStrength.toString()} onValueChange={(value) => setNicotineStrength(Number.parseInt(value))} />
+                        <Input name="targetVolume" label={tM('target_volume')} endContent="ml" type="number" value={targetVolume.toString()} onValueChange={(value) => setTargetVolume(Number.parseInt(value))}  />
 
-                        <Button formAction={createNewLiquid} type="submit">Save as new Liquid</Button>
+                        <Button formAction={createNewLiquid} type="submit">{t('save_new')}</Button>
 
                     </div>
                     <div className="w-full">
-                        <h3 className="text-2xl">Nicotine Bases</h3>
+                        <h3 className="text-2xl">{tM('nicotine_bases')}</h3>
                         <div>
                             {nicotineBaseCards}
                         </div>
-                        <h3 className="text-2xl">Filler Bases</h3>
+                        <h3 className="text-2xl">{tM('filler_bases')}</h3>
                         <div>
                             {fillerBaseCards}
                         </div>
